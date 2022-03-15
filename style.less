@@ -1,0 +1,126 @@
+@mobile-width: 375px;
+@desktop-width: 1440px;
+@soft-blue: hsl(215, 51%, 70%);
+@cyan: hsl(178, 100%, 50%);
+@dark-blue-main-bg: hsl(217, 54%, 11%);
+@very-dark-blue-card-bg: hsl(216, 50%, 16%);
+@very-dark-blue-line: hsl(215, 32%, 27%);
+@white: hsl(0, 0%, 100%);
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: @dark-blue-main-bg;
+  display: grid;
+  font-size: 18px;
+}
+
+.card {
+  align-self: center;
+  justify-self: center;
+  width: @mobile-width;
+
+  &__container {
+    background-color: @very-dark-blue-card-bg;
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  &__main-image {
+    background-image: url('images/image-equilibrium.jpg');
+    background-color: @cyan;
+    background-size: cover;
+    width: 100%;
+    height: 327px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+      transition: background-color ease-in-out 0.3s;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: @white;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      color: @cyan;
+      transition: color ease-in-out 0.3s;
+    }
+  }
+
+  &__description {
+    color: @very-dark-blue-line;
+    font-weight: 300;
+    padding: 1rem 0;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__value {
+    color: cyan;
+    font-weight: 400;
+  }
+
+  &__time {
+    color: @very-dark-blue-line;
+    font-weight: 300;
+  }
+
+  &__value,
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background-color: @very-dark-blue-line;
+    margin: 1rem 0 1.25rem 0;
+  }
+
+  &__creator {
+    display: flex;
+    align-items: center;
+
+    &-avatar {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+      border: 1px solid @white;
+      border-radius: 50%;
+    }
+
+    &-name {
+      color: @very-dark-blue-line;
+      font-weight: 300;
+
+      &--emphasis {
+        color: @white;
+        cursor: pointer;
+
+        &:hover {
+          color: @cyan;
+          transition: color ease-in-out 0.3s;
+        }
+      }
+    }
+  }
+}
