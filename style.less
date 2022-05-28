@@ -32,9 +32,17 @@ body {
     padding: 1.5rem;
   }
 
+  &__icon-image {
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    object-fit: none;
+    border-radius: 0.5rem;
+  }
+
   &__main-image {
     background-image: url('images/image-equilibrium.jpg');
-    background-color: @cyan;
     background-size: cover;
     width: 100%;
     height: 327px;
@@ -43,8 +51,11 @@ body {
     cursor: pointer;
 
     &:hover {
-      opacity: 0.5;
-      transition: background-color ease-in-out 0.3s;
+      .card__icon-image {
+        opacity: 1;
+        background-color: hsla(178, 100%, 50%, 0.506);
+        transition: background-color ease-in-out 0.3s;
+      }
     }
   }
 
